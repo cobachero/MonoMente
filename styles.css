@@ -1,0 +1,541 @@
+/* Configuración General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lexend';
+    background-image: url('monodos.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    position: relative;
+    width: 110%;
+    max-width: 1200px;
+    padding: 10px;
+}
+
+/* Decoración de las enredaderas (Opcional si usas imagen) */
+.vines {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 250px;
+    height: 250px;
+    background-image: url('hojas-decoracion.png'); /* Sustituir con tu SVG de hojas */
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+/* Layout Principal */
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.text-section {
+    flex: 1;
+}
+
+.image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Tipografía */
+h1 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+p {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #000000;
+    margin-bottom: 40px;
+    max-width: 500px;
+}
+
+/* Botón */
+.btn-start {
+    display: inline-block;
+    backdrop-filter: blur(10px);
+    background-color: rgba(210, 87, 0, 0.221); /* Color melón/naranja claro semi-transparente */
+    color: #000000;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.3rem;
+    padding: 15px 40px;
+    border: 1px solid #e6500041;
+    border-radius: 40px; /* Bordes muy redondeados */
+    
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-start:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 0px #000000;
+}
+
+.btn-start:active {
+    transform: translateY(2px);
+    box-shadow: 0px 1px 0px #000000;
+}
+
+.btn-next {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #f2c6c8;
+    color: #000000;
+    text-decoration: none;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 14px 36px;
+    border-radius: 50px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-next:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+}
+
+.footer-action {
+    text-align: center;
+    margin: 30px 0 20px;
+}
+
+/* Imagen de los Monos */
+.monkeys-img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    h1 { font-size: 3rem; }
+    p { font-size: 1.4rem; margin: 0 auto 30px auto; }
+}
+:root {
+    --bg-light-green: #e1fbe5;
+    --item-bg: #c9e7d2;
+    --accent-orange: #eaa97d;
+    --text-color: #5e1d3d; /* Color vino de las letras */
+}
+
+body {
+    font-family: 'Lexend', sans-serif;
+    background-color: #ffffff;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.main-header {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.disclaimer { font-size: 0.7rem; font-weight: bold; margin-bottom: 15px; }
+h1 { font-size: 1.8rem; margin-bottom: 5px; }
+h2 { font-size: 1.2rem; font-weight: 300; }
+
+.survey-container {
+    backdrop-filter: blur(15px);
+    background-color: rgba(7, 179, 133, 0.149);
+    border-radius: 30px;
+    border: 1px solid #02121034;
+    padding: 25px;
+    width: 100%;
+    max-width: 450px;
+}
+
+.question-group {
+    margin-bottom: 25px;
+}
+
+.question-group label {
+    display: block;
+    color: var(--text-color);
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+/* Grillas para Emojis y Números */
+.emoji-grid, .number-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+/* Esconder el radio button real */
+input[type="radio"], input[type="checkbox"] {
+    display: none;
+}
+
+/* Estilo de las cajitas */
+.box-option {
+    background-color: var(--item-bg);
+    height: 50px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    border: 1px solid #0445346d;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+/* Estilo de las listas (Checkboxes) */
+.list-item {
+    background-color: var(--item-bg);
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid #0445346d;
+    margin-bottom: 8px;
+    display: flex !important;
+    align-items: center;
+    cursor: pointer;
+}
+
+.list-item::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--text-color);
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+/* Estados seleccionados */
+input[type="radio"]:checked + .box-option,
+.list-item.selected {
+    background-color: var(--accent-orange);
+    color: white;
+    border: 2px solid var(--text-color);
+}
+
+.list-item.selected::before {
+    background-color: var(--text-color);
+    border-color: #ffffff;
+    content: '✓';
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+/* Botones */
+.btn-ready {
+    width: 100%;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 122, 73, 0.325);
+    border: solid 1px #eaa97d;
+    padding: 15px;
+    border-radius: 30px;
+    color: var(--text-color);
+    font-family: 'Lexend';
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-continue {
+    margin-top: 30px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(36, 221, 138, 0.251);
+    border: 2px solid #023e024f;
+    color: #004e20e7;
+    padding: 10px 40px;
+    border-radius: 30px;
+    font-family: 'Lexend';
+    font-size: 1.2rem;
+    box-shadow: 0 0 10px rgba(46, 204, 113, 0.4);
+}
+
+.footer-note {
+    font-size: 0.6rem;
+    text-align: center;
+    margin-top: 10px;
+    opacity: 0.7;
+}
+
+/* Estilos para tips.html */
+.tips-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.main-icon img {
+    width: 150px;
+    height: auto;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tip-card {
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.tip-card p {
+    font-weight: 400;
+}
+
+.subtitle {
+    font-weight: 700;
+}
+
+.card-img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+body {
+    font-family: 'Lexend', sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 20px;
+    color: #1a1a1a;
+}
+
+.tips-header {
+    text-align: center;
+    padding: 40px 10px;
+    position: relative;
+}
+
+/* Decoraciones de las esquinas */
+.decor {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #4ed9b6; /* Verde de la imagen */
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    z-index: -1;
+}
+.decor-tl { top: -20px; left: -20px; }
+.decor-tr { top: -20px; right: -20px; }
+
+h1 { font-size: 1.5rem; margin-bottom: 20px; }
+.subtitle { font-size: 1.1rem; max-width: 400px; margin: 0 auto; }
+
+.main-icon img { width: 80px; margin-bottom: 10px; }
+
+/* El Mosaico Mágico */
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+/* Estilo Base de las Tarjetas */
+.tip-card {
+    backdrop-filter: blur(15px);
+    padding: 25px;
+    border-radius: 30px;
+    border: 1px solid rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tip-card h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.tip-card p {
+    line-height: 1.5;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.card-img {
+    width: 120px;
+    align-self: center;
+    margin-top: 15px;
+}
+
+/* Colores de las Tarjetas */
+.card-green  { background-color: rgba(131, 255, 210, 0.181); }
+.card-brown  { background-color: rgba(255, 110, 13, 0.19); }
+.card-purple { background-color: rgba(119, 45, 255, 0.301); }
+.card-pink   { background-color: rgba(185, 0, 92, 0.251); }
+.card-yellow { background-color: rgba(255, 232, 85, 0.227); }
+.card-cyan   { background-color: rgba(7, 241, 253, 0.193); }
+
+/* Ajustes para Celular */
+@media (max-width: 600px) {
+    .tips-grid {
+        grid-template-columns: 1fr; /* Una sola columna en móvil */
+    }
+    
+    h1 { font-size: 1.3rem; }
+    
+    .tip-card {
+        border-radius: 50px;
+    }
+
+}
+.footer-farewell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    /* Animación suave al cargar */
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.farewell-content {
+    max-width: 500px;
+}
+
+.bye-monkey {
+    width: 400px;
+    margin-bottom: 20px;
+    mix-blend-mode: multiply;
+    /* Animación de balanceo suave */
+    animation: wave 2s infinite ease-in-out;
+}
+
+.footer-farewell h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+}
+
+.footer-farewell p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #4a4a4a;
+    margin-bottom: 5px;
+}
+
+.final-line {
+    font-weight: 300;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.btn-close-final {
+    margin-top: 40px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #e6a77b;
+    font-family: 'Lexend';
+    font-size: 1rem;
+    cursor: pointer;
+    color: #1a1a1a;
+    padding-bottom: 5px;
+    transition: opacity 0.3s;
+}
+
+.btn-close-final:hover {
+    opacity: 0.6;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes wave {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(10deg); }
+}
+/* --- Ajustes para Celular (Pantallas menores a 768px) --- */
+@media (max-width: 768px) {
+    
+    /* 1. Ajuste para la página de inicio (Monos) */
+    .content {
+        flex-direction: column; /* Pone los monos debajo del texto */
+        text-align: center;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2.5rem !important; /* Texto más pequeño para que no se corte */
+    }
+
+    p {
+        font-size: 1.2rem !important;
+        max-width: 100%;
+    }
+
+    /* 2. Ajuste para la Encuesta */
+    .survey-container {
+        width: 95%; /* Que ocupe casi todo el ancho */
+        padding: 15px;
+    }
+
+    .emoji-grid, .number-grid {
+        gap: 5px; /* Menos espacio entre botones */
+    }
+
+    .box-option {
+        font-size: 1rem;
+        height: 45px;
+    }
+
+    /* 3. Ajuste para los Tips (Grid) */
+    .tips-grid {
+        grid-template-columns: 1fr; /* Una sola tarjeta por fila */
+        padding: 10px;
+    }
+
+    /* 4. Ajuste para la Despedida */
+    .footer-farewell h2 {
+        font-size: 1.5rem;
+    }
+    
+    .bye-monkey {
+        width: 300px;
+    }
+}
