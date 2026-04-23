@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monomente - Inicio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* 1. Configuración General */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Lexend', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body, html {
+            height: 100%;
+            width: 100%;
+            background-image: url('fondo.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 2. El Contenedor Principal (Flexbox) */
+        .main-container {
+            display: flex;
+            height: 100vh;
+            flex-direction: row; /* Lado a lado en PC */
+        }
+
+        /* 3. Lado Izquierdo (Verde) */
+        .left-side {
+            flex: 1;
+            backdrop-filter: blur(15px);
+            background-color: rgba(34, 255, 38, 0.142); /* Verde clarito semi-transparente */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            padding: 20px;
+            margin: 15px;
+            border-radius: 65px;
+        }
+
+        .logo-container img {
+            max-width: 80%;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* Aquí pondrás la imagen que exportes de Canva */
+        }
+
+        .brand-title-svg {
+            position: absolute;
+            bottom: 4%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* 4. Lado Derecho (Crema) */
+        .right-side {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .slogan {
+            font-size: 2.7rem;
+            color: hsl(102, 57%, 66%); /* Verde oscuro para el texto */
+            margin-bottom: 30px;
+            font-weight: bold;
+            max-width: 400px;
+            
+            
+            border-radius: 80px;
+            padding: 20px;
+        }
+
+        /* 5. El Botón de Comenzar */
+        .btn-comenzar {
+            backdrop-filter: blur(10px);
+            background-color: rgba(135, 255, 159, 0.127);
+            color: #ffffff;
+            border: 2px solid #01532a30;
+            padding: 15px 40px;
+            font-size: 2.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none; /* Quita el subrayado del link */
+            transition: all 0.3s ease;
+        }
+
+        .btn-comenzar:hover {
+            background-color: #ffffff;
+            color: white;
+        }
+
+        /* 6. RESPONSIVO: Ajustes para Celular */
+        @media (max-width: 768px) {
+            .main-container {
+                flex-direction: column; /* Apila uno arriba del otro */
+            }
+            .left-side, .right-side {
+                flex: none;
+                height: 50vh; /* Mitad de pantalla para cada uno */
+            }
+            .slogan {
+                font-size: 1.8rem;
+            }
+            .cloud {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+    <div class="cloud cloud3"></div>
+
+    <div class="main-container">
+        <section class="left-side">
+            <div class="logo-container">
+                <img src="logo.png" alt="Logo Monomente">
+            </div>
+            <svg class="brand-title-svg" width="250" height="200" viewBox="0 0 250 160">
+                <defs>
+                    <path id="curve" d="M 10 80 Q 125 200 240 80" />
+                </defs>
+                <text font-family="Lexend" font-size="42" fill="#2d5a10" font-weight="700" text-anchor="middle" letter-spacing="2px">
+                    <textPath href="#curve" startOffset="50%">MonoMente</textPath>
+                </text>
+            </svg>
+        </section>
+
+        <section class="right-side">
+            <h1 class="slogan">Cuida tu mente relaja tu mundo</h1>
+            
+            <a href="nosotros.html" class="btn-comenzar">Comenzar</a>
+        </section>
+    </div>
+
+</body>
+</html>
