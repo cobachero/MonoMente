@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta de Bienestar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-image: url('fondoencuesta.png') !important;
+            background-size: cover !important;
+            background-repeat: no-repeat !important;
+            background-color: #ffffff !important;
+        }
+
+        .box-option,
+        .list-item,
+        .btn-ready {
+            transition: transform 0.18s ease, background-color 0.18s ease, box-shadow 0.18s ease;
+        }
+
+        .box-option:hover,
+        .list-item:hover {
+            background-color: rgba(255, 255, 255, 0.85);
+            transform: translateY(-3px);
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
+        }
+
+        .box-option:focus,
+        .list-item:focus-within {
+            background-color: rgba(255, 255, 255, 0.95);
+            border: 2px solid rgba(0, 0, 0, 0.2);
+            transform: translateY(-3px);
+            outline: none;
+        }
+
+        .btn-ready:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 18px 35px rgba(0, 0, 0, 0.18);
+            background-color: rgba(234, 169, 125, 0.95);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <p class="disclaimer">ⓘ este sitio brinda orientación general, no sustituye ayuda profesional</p>
+        <h1>Cuentame como te sientes</h1>
+        <h2>Solo tomara 1 minuto 💛</h2>
+    </header>
+
+    <form id="wellness-form" class="survey-container" action="tips.html" method="get">
+        
+        <div class="question-group">
+            <label>1. ¿Como ha estado tu dia hasta ahora?</label>
+            <div class="emoji-grid">
+                <input type="radio" name="mood" value="1" id="m1"><label for="m1" class="box-option">☹️</label>
+                <input type="radio" name="mood" value="2" id="m2"><label for="m2" class="box-option">😟</label>
+                <input type="radio" name="mood" value="3" id="m3"><label for="m3" class="box-option">😐</label>
+                <input type="radio" name="mood" value="4" id="m4"><label for="m4" class="box-option">🙂</label>
+                <input type="radio" name="mood" value="5" id="m5"><label for="m5" class="box-option">😁</label>
+            </div>
+        </div>
+
+        <div class="question-group">
+            <label>2. ¿Que tan estresad@ te sientes el día de hoy?</label>
+            <div class="number-grid">
+                <input type="radio" name="stress-level" value="1" id="s1"><label for="s1" class="box-option">1</label>
+                <input type="radio" name="stress-level" value="2" id="s2"><label for="s2" class="box-option">2</label>
+                <input type="radio" name="stress-level" value="3" id="s3"><label for="s3" class="box-option">3</label>
+                <input type="radio" name="stress-level" value="4" id="s4"><label for="s4" class="box-option">4</label>
+                <input type="radio" name="stress-level" value="5" id="s5"><label for="s5" class="box-option">5</label>
+            </div>
+        </div>
+
+        <div class="question-group">
+            <label>3. ¿Que cosas te causan mas estrés?</label>
+            <div class="list-options">
+                <label class="list-item"><input type="checkbox" name="causes" value="escuela"> Escuela/Tareas</label>
+                <label class="list-item"><input type="checkbox" name="causes" value="tiempo"> Falta de Tiempo</label>
+                <label class="list-item"><input type="checkbox" name="causes" value="cansancio"> Cansancio</label>
+                <label class="list-item"><input type="checkbox" name="causes" value="personales"> Problemas personales</label>
+                <label class="list-item"><input type="checkbox" name="causes" value="redes"> Redes sociales</label>
+                <label class="list-item"><input type="checkbox" name="causes" value="trabajo"> Trabajo</label>
+                <label class="list-item"><input type="checkbox" name="causes" value="ambiente"> Ambiente toxico</label>
+            
+            </div>
+        </div>
+
+        <div class="question-group">
+            <label>4. ¿Que haces cuanto te sientes mal?</label>
+            <div class="list-options">
+                <label class="list-item"><input type="checkbox" name="reaction" value="telefono"> Me distraigo viendo el teléfono</label>
+                <label class="list-item"><input type="checkbox" name="reaction" value="hablar"> Hablo con una persona</label>
+                <label class="list-item"><input type="checkbox" name="reaction" value="ia"> Hablo con IA</label>
+                <label class="list-item"><input type="checkbox" name="reaction" value="aislo"> Me duermo o me aíslo</label>
+                <label class="list-item"><input type="checkbox" name="reaction" value="guardo"> Me lo guardo</label>
+            </div>
+        </div>
+
+        <div class="question-group">
+            <label>5. ¿Que crees que necesitas en este momento?</label>
+            <div class="list-options">
+                <label class="list-item"><input type="checkbox" name="reaction" value="abrazo"> Un abrazo</label>
+                <label class="list-item"><input type="checkbox" name="reaction" value="hablarlo"> Hablarlo con alguien</label>
+                <label class="list-item"><input type="checkbox" name="reaction" value="descansar"> Descansar</label>
+                <label class="list-item"><input type="checkbox" name="reaction" value="consejo"> Un consejo</label>
+                <label class="list-item"><input type="checkbox" name="reaction" value="actividad"> Una actividad diferente</label>
+                <label class="list-item"><input type="checkbox" name="reaction" value="llorar"> Llorar</label>
+
+            </div>
+        </div>
+
+        <button type="submit" class="btn-ready">Listo</button>
+        <p class="footer-note">Gracias por tomarte un tiempo para ti "<3" </p>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
