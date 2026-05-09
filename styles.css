@@ -167,7 +167,7 @@ h2 { font-size: 1.2rem; font-weight: 300; }
 
 .survey-container {
     backdrop-filter: blur(15px);
-    background-color: rgba(7, 179, 133, 0.149);
+    background-color: rgba(46, 119, 81, 0.14);
     border-radius: 30px;
     border: 1px solid #02121034;
     padding: 25px;
