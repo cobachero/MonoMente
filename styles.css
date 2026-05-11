@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Lexend';
-    background-image: url('monodos.png');
+    background-image: url('menu.png');
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -16,6 +16,7 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
 }
+
 
 .container {
     position: relative;
@@ -77,25 +78,25 @@ p {
 .btn-start {
     display: inline-block;
     backdrop-filter: blur(10px);
-    background-color: rgba(210, 87, 0, 0.221); /* Color melón/naranja claro semi-transparente */
+    background-color: rgba(255, 177, 121, 0.303); /* Color melón/naranja claro semi-transparente */
     color: #000000;
     text-decoration: none;
     font-weight: 700;
     font-size: 1.3rem;
     padding: 15px 40px;
-    border: 1px solid #e6500041;
+    border: 1px solid #7b594641;
     border-radius: 40px; /* Bordes muy redondeados */
     
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .btn-start:hover {
-    transform: translateY(-2px);
+    transform: scale(1.05);
     box-shadow: 0px 6px 0px #000000;
 }
 
 .btn-start:active {
-    transform: translateY(2px);
+    transform: scale(0.95);
     box-shadow: 0px 1px 0px #000000;
 }
 
@@ -114,7 +115,7 @@ p {
 }
 
 .btn-next:hover {
-    transform: translateY(-2px);
+    transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0,0,0,0.12);
 }
 
@@ -141,7 +142,7 @@ p {
 }
 :root {
     --bg-light-green: #e1fbe5;
-    --item-bg: #c9e7d2;
+    --item-bg: #fbd19a4a;
     --accent-orange: #eaa97d;
     --text-color: #5e1d3d; /* Color vino de las letras */
 }
@@ -167,7 +168,7 @@ h2 { font-size: 1.2rem; font-weight: 300; }
 
 .survey-container {
     backdrop-filter: blur(15px);
-    background-color: rgba(46, 119, 81, 0.14);
+    background-color: rgba(190, 169, 137, 0.207);
     border-radius: 30px;
     border: 1px solid #02121034;
     padding: 25px;
@@ -206,7 +207,7 @@ input[type="radio"], input[type="checkbox"] {
     align-items: center;
     justify-content: center;
     border-radius: 20px;
-    border: 1px solid #0445346d;
+    border: 1px solid #4533046d;
     cursor: pointer;
     font-size: 1.2rem;
 }
@@ -216,7 +217,7 @@ input[type="radio"], input[type="checkbox"] {
     background-color: var(--item-bg);
     padding: 12px 15px;
     border-radius: 10px;
-    border: 1px solid #0445346d;
+    border: 1px solid #4533046d;
     margin-bottom: 8px;
     display: flex !important;
     align-items: center;

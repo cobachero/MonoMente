@@ -22,7 +22,7 @@ document.getElementById('wellness-form').addEventListener('submit', function(e) 
             reactions: results.reactions
         }));
         alert("¡Gracias por compartir cómo te sientes!");
-        window.location.href = 'tips.html';
+        window.location.href = 'menu.html';
     }
 });
 

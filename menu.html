@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú - Monomente</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Lexend', sans-serif;
+            background-image: url('menu.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: #333;
+        }
+
+        .menu-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #2d5a27;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin-bottom: 30px;
+        }
+
+        .menu-card {
+            background: rgba(138, 255, 109, 0);;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 30px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;            border: 1px solid #000000;        }
+
+        .menu-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .menu-card h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #2d5a27;
+        }
+
+        .menu-card img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 15px;
+            border-radius: 15px;
+        }
+
+        .menu-card a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .finish-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 15px 30px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            max-width: 200px;
+            border: 1px solid #000000;
+        }
+
+        .finish-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .finish-card a {
+            text-decoration: none;
+            color: #2d5a27;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .menu-title {
+                font-size: 2rem;
+            }
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+            .menu-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="menu-title">¿A dónde quieres ir primero?</h1>
+
+    <div class="menu-grid">
+        <div class="menu-card">
+            <a href="tips.html">
+                <h3>Tips</h3>
+                <img src="tips.png" alt="Imagen de tips" class="card-img">
+            </a>
+        </div>
+        <div class="menu-card">
+            <a href="ejercicios.html">
+                <h3>Ejercicios</h3>
+                <img src="ejercicios.png" alt="Imagen de ejercicios" class="card-img">
+            </a>
+        </div>
+        <div class="menu-card">
+            <a href="videos.html">
+                <h3>Videos</h3>
+                <img src="videos.png" alt="Imagen de videos" class="card-img">
+            </a>
+        </div>
+    </div>
+
+    <div class="finish-card">
+        <a href="final.html">Finalizar</a>
+    </div>
+
+</body>
+</html>
