@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "🧘‍♂️ Estás muy saturado/a. Tómate una pausa y aléjate un momento.": "monosaturado.png",
     "😌 Vas manejando el estrés, pero no ignores cómo te sientes.": "monoguiño.png",
     "✨ Buen manejo del estrés, sigue cuidándote.": "monocuidado.png",
-    "💛 Está bien tener un día gris. No te exijas estar bien todo el tiempo.": "monodiasgrises.png",
+    "💛 Está bien tener un día gris. No te exijas estar bien todo el tiempo.": "mono-sentimientos.png",
     "🌥️ Estás en un punto neutro. Intenta hacer algo pequeño que te guste.": "mononeutro.png",
     "🌞 Se nota que tu día va bien, aprovecha esa energía.": "monoguiño.png",
     "📚 Divide tus tareas en partes pequeñas: no todo tiene que hacerse hoy.": "monoescuela.png",
@@ -31,6 +31,10 @@ document.addEventListener("DOMContentLoaded", () => {
     "🧠 Regla: si las abres, hazlo con intención (algo concreto) y con tiempo límite.": "monoredes.png",
     "🫂 Hablar con alguien de confianza puede ayudarte a soltar lo que sientes.": "monos-habla.png",
     "🧯 Si no quieres hablar, intenta escribir lo que te pasa tal cual durante 5 minutos.": "monos-fuego.png",
+    "📝 Si buscas un consejo, escribe primero lo que necesitas y elige una idea sencilla que puedas probar.": "mono-escucha.png",
+    "💡 A veces un consejo pequeño funciona mejor: enfócate en algo concreto y hazlo paso a paso.": "mono-escucha.png",
+    "🫂 Hablarlo con alguien puede ayudarte a ver la situación con más calma y sentirte acompañado.": "monos-habla.png",
+    "💬 Elige a alguien de confianza y dile algo como “Necesito desahogarme, ¿puedo contarte algo?”.": "monos-habla.png",
     "🚧 Ambiente tóxico: pon distancia emocional y límites claros.": "monoambiente.png",
     "🧊 Recuerda que no debes cargar con problemas de los demás.": "monos-aleja.png",
     "🗺️ Plan B: identifica un lugar/persona segura a la que puedas ir si sube el tono.": "monos-ilustracion.png",
@@ -104,6 +108,16 @@ document.addEventListener("DOMContentLoaded", () => {
   if (reactions.includes("guardo")) {
     tips.push("💬 Guardarte todo puede hacer que pese más. Intenta escribirlo o hablarlo.");
     tips.push("✍️ Escribe lo que sientes en un papel tal y como es, luego lo quemas");
+  }
+
+  if (reactions.includes("consejo")) {
+    tips.push("📝 Si buscas un consejo, escribe primero lo que necesitas y elige una idea sencilla que puedas probar.");
+    tips.push("💡 A veces un consejo pequeño funciona mejor: enfócate en algo concreto y hazlo paso a paso.");
+  }
+
+  if (reactions.includes("hablarlo")) {
+    tips.push("🫂 Hablarlo con alguien puede ayudarte a ver la situación con más calma y sentirte acompañado.");
+    tips.push("💬 Elige a alguien de confianza y dile algo como “Necesito desahogarme, ¿puedo contarte algo?”.");
   }
 
   if (reactions.includes("aislo")) {

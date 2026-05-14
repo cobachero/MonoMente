@@ -16,19 +16,19 @@
 
   const exerciseImageMap = {
     "Respira lento 4-7-8 por 2 minutos.": "mono-respira.png",
-    "Haz 3 estiramientos suaves de brazos y cuello.": "monoactividad.png",
+    "Haz 3 estiramientos suaves de brazos y cuello.": "monocansancio.png",
     "Camina 5 minutos al aire libre sin teléfono.": "monoactividad.png",
-    "Escribe en una hoja lo que estás sintiendo durante 5 minutos.": "monos-habla.png",
+    "Escribe en una hoja lo que estás sintiendo durante 5 minutos.": "monos-fuego.png",
     "Toma un vaso de agua y haz una pausa breve.": "mono-duerme.png",
     "Organiza tu tarea en bloques de 20 minutos y anota el avance.": "monoescuela.png",
-    "Trabaja 25 minutos y descansa 5 con la técnica Pomodoro.": "monotiempo.png",
-    "Cierra los ojos 2 minutos, relaja tus hombros y respira tranquilo.": "mono-duerme.png",
+    "Trabaja 25 minutos y descansa 5.": "monotiempo.png",
+    "Cierra los ojos 2 minutos, relaja tus hombros y respira tranquilo.": "ejercicios.png",
     "Apaga notificaciones y deja el teléfono a un lado por 10 minutos.": "mono-telefono.png",
     "Haz movimientos libres durante 2 minutos con tu música favorita.": "monoactividad.png",
     "Camina con intención y respira profundo 2 minutos.": "monoactividad.png",
     "Abraza tus brazos y respira profundo durante 1 minuto.": "monoabrazo.png",
     "Haz respiraciones suaves: inhala 4, exhala 6, repite 4 veces.": "mono-respira.png",
-    "Cierra los ojos 1 minuto y cuenta tus respiraciones.": "mono-duerme.png",
+    "Cierra los ojos 1 minuto y cuenta tus respiraciones.": "ejercicios.png",
     "Escribe una lista de 3 cosas pequeñas que te hicieron bien hoy.": "mono-corazon.png"
   };
 
@@ -51,7 +51,7 @@
 
   if (causes.includes("escuela")) {
     exercises.push("Organiza tu tarea en bloques de 20 minutos y anota el avance.");
-    exercises.push("Trabaja 25 minutos y descansa 5 con la técnica Pomodoro.");
+    exercises.push("Trabaja 25 minutos y descansa 5.");
   }
 
   if (causes.includes("tiempo")) {
@@ -75,8 +75,7 @@
   }
 
   if (causes.includes("ambiente")) {
-    exercises.push("Abraza tus brazos y respira profundo durante 1 minuto.");
-    exercises.push("Camina con intención y respira profundo 2 minutos.");
+    exercises.push("Abraza tus brazos y respira profundo durante 1 minuto.");;
   }
 
   if (reactions.includes("guardo")) {

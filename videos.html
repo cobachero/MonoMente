@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos - Monomente</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .videos-header {
+            text-align: center;
+            padding: 40px 10px;
+            position: relative;
+        }
+        .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+        .video-card {
+            backdrop-filter: blur(15px);
+            padding: 25px;
+            border-radius: 30px;
+            border: 1px solid rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 220px;
+        }
+        @media (max-width: 768px) {
+            .videos-grid {
+                grid-template-columns: 1fr;
+                margin: 20px auto;
+            }
+            .videos-header {
+                padding: 30px 10px;
+            }
+            .video-card {
+                padding: 20px;
+            }
+            .video-card h3 {
+                font-size: 1.1rem;
+            }
+            .video-card p {
+                font-size: 0.98rem;
+            }
+            .video-link {
+                width: 100%;
+                text-align: center;
+            }
+        }
+        .video-card h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: #2d5a27;
+        }
+        .video-card p {
+            line-height: 1.5;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+        .video-preview {
+            width: 100%;
+            border-radius: 20px;
+            margin-top: 10px;
+            background-color: #000;
+            max-height: 220px;
+        }
+        .video-link {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 12px 20px;
+            background-color: #f2c6c8;
+            color: #000;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .video-link:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+        }
+        .videos-footer {
+            text-align: center;
+            margin: 30px 0 20px;
+        }
+        .btn-next {
+    display: inline-block;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 177, 121, 0.303); /* Color melón/naranja claro semi-transparente */
+    color: #000000;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.3rem;
+    padding: 15px 40px;
+    border: 1px solid #7b594641;
+    border-radius: 40px; /* Bordes muy redondeados */
+    
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+    </style>
+</head>
+<body>
+    <header class="videos-header">
+        <h1>Videos para acompañarte</h1>
+        <p class="subtitle">Aqui encontraras algunos videos con diferentes tecnicas para manejar el estres y la ansiedad.</p>
+    </header>
+
+    <section class="videos-grid">
+        <div class="video-card">
+            <h3>Tecnicas de respiracion y relajacion</h3>
+            <p>Aqui encontraras algunas tecnicas de respiración y relajación.</p>
+            <iframe class="video-preview" src="https://www.youtube.com/embed/kopxKlq9kus" title="Video 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video-card">
+            <h3>Respiracion conciente</h3>
+            <p>Tecnicas breves para manejar tu estrés.</p>
+            <iframe class="video-preview" src="https://www.youtube.com/embed/RC5o36ErgCA?si=P-lOp8bq2YWuH7ZT" title="Video 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video-card">
+            <h3>Ataque de ansiedad</h3>
+            <p>7 pasos para superar un ataque de ansiedad.</p>
+            <iframe class="video-preview" src="https://youtube.com/embed/UllyKp438kI?si=wvysRF0fvKXhcj29" title="Video 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video-card">
+            <h3>Reducir estrés</h3>
+            <p>El mejor ejercicio para reducir estrés segun la ciencia.</p>
+            <iframe class="video-preview" src="https://youtube.com/embed/FKUlkuZnQy4?si=v5-cI2IXZAu0z1wW" title="Video 4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video-card">
+            <h3>Bajar el cortisol</h3>
+            <p>4 ejercicios para reducir el cortisol.</p>
+            <iframe class="video-preview" src="https://youtube.com/embed/_bFvDzFdpn8?si=B60ayb1yHQyM5TBq" title="Video 4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <div class="videos-footer">
+        <a href="menu.html" class="btn-next">Volver al menú</a>
+         <a href="final.html" class="btn-next">Finalizar</a>
+    </div>
+</body>
+</html>
