@@ -75,7 +75,7 @@
   }
 
   if (causes.includes("ambiente")) {
-    exercises.push("Abraza tus brazos y respira profundo durante 1 minuto.");;
+    exercises.push("Abraza tus brazos y respira profundo durante 1 minuto.");
   }
 
   if (reactions.includes("guardo")) {

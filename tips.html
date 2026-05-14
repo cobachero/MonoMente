@@ -79,9 +79,27 @@
     padding: 15px 40px;
     border: 1px solid #7b594641;
     border-radius: 40px; /* Bordes muy redondeados */
-    
     transition: transform 0.2s, box-shadow 0.2s;
 }
+.btn-finish {
+    display: inline-block;
+    backdrop-filter: blur(10px);
+    background-color: rgba(146, 200, 247, 0.85);
+    color: #062a47;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.3rem;
+    padding: 15px 40px;
+    border: 1px solid rgba(5, 65, 109, 0.18);
+    border-radius: 40px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-next:hover,
+.btn-finish:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+    </style>
     <script src="tips.js"></script>
 </body>
 </html>
