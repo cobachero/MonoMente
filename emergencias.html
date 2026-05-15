@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergencias - Monomente</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Lexend', sans-serif;
+            background-image: url('menu.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: #333;
+        }
+
+        .emergency-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #2d5a27;
+        }
+
+        .urgent-banner {
+            background: linear-gradient(90deg, #b71c1c, #e53935);
+            color: #fff;
+            padding: 18px 24px;
+            border-radius: 18px;
+            max-width: 920px;
+            text-align: center;
+            font-weight: 800;
+            font-size: 1.25rem;
+            margin: 0 auto 26px auto;
+            box-shadow: 0 6px 20px rgba(229,57,53,0.35);
+            border: 2px solid rgba(255,255,255,0.12);
+            animation: pulseRed 1.8s infinite;
+        }
+
+        @keyframes pulseRed {
+            0% { box-shadow: 0 6px 20px rgba(229,57,53,0.35); transform: translateY(0); }
+            50% { box-shadow: 0 10px 30px rgba(229,57,53,0.45); transform: translateY(-3px); }
+            100% { box-shadow: 0 6px 20px rgba(229,57,53,0.35); transform: translateY(0); }
+        }
+
+        .emergency-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin-bottom: 30px;
+            width: 100%;
+        }
+
+        .emergency-number-card {
+            background: rgba(255, 77, 77, 0.85);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 30px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 2px solid #d32f2f;
+        }
+
+        .emergency-number-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+        }
+
+        .emergency-number-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .emergency-number-card .phone-number {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .emergency-number-card a {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border: 2px solid white;
+            transition: background 0.3s;
+        }
+
+        .emergency-number-card a:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        .back-button {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 15px 30px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            max-width: 200px;
+            border: 1px solid #000000;
+        }
+
+        .back-button:hover {
+            transform: translateY(-3px);
+        }
+
+        .back-button a {
+            text-decoration: none;
+            color: #2d5a27;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .emergency-title {
+                font-size: 2rem;
+                margin-bottom: 30px;
+            }
+
+            .emergency-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .emergency-number-card {
+                padding: 30px 20px;
+            }
+
+            .emergency-number-card h3 {
+                font-size: 1.3rem;
+                margin-bottom: 15px;
+            }
+
+            .emergency-number-card .phone-number {
+                font-size: 1.8rem;
+                margin-bottom: 15px;
+            }
+
+            .emergency-number-card a {
+                padding: 10px 25px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="emergency-title">Números de Emergencia</h1>
+
+    <div class="urgent-banner" role="alert" aria-live="polite">¡Si la situación se está descontrolando, pide ayuda urgente!</div>
+
+    <div class="emergency-grid">
+        <div class="emergency-number-card">
+            <h3>Llama a la linea de la vida</h3>
+            <div class="phone-number">800 911 2000</div>
+            <a href="tel:8009112000">Llamar ahora</a>
+        </div>
+
+        <div class="emergency-number-card">
+            <h3>Sistema de asistencia psicológica telefonica</h3>
+            <div class="phone-number">(55)5259 8121</div>
+            <a href="tel:(55)52598121">Llamar ahora</a>
+        </div>
+
+        <div class="emergency-number-card">
+            <h3>UIES Para riesgo de suicidio</h3>
+            <div class="phone-number">800 0044 800</div>
+            <a href="tel:8000044800">Llamar ahora</a>
+        </div>
+
+        <div class="emergency-number-card">
+            <h3>SIMISAE Ayuda psicologica gratuita</h3>
+            <div class="phone-number">800 911 3232</div>
+            <a href="tel:8009113232">Llamar ahora</a>
+        </div>
+    </div>
+
+    <div class="back-button">
+        <a href="menu.html">Volver</a>
+    </div>
+
+</body>
+</html>
