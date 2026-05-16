@@ -107,6 +107,27 @@
             transform: scale(1.05);
         }
 
+        .btn-secondary {
+            display: inline-block;
+            margin-top: 18px;
+            backdrop-filter: blur(10px);
+            background-color: rgba(93, 147, 216, 0.18);
+            color: #083264;
+            border: 2px solid rgba(15, 64, 119, 0.25);
+            padding: 15px 40px;
+            font-size: 1.3rem;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255,255,255,0.95);
+            color: #07224b;
+            transform: scale(1.05);
+        }
+
         /* 6. RESPONSIVO: Ajustes para Celular */
         @media (max-width: 768px) {
             .main-container {
@@ -148,6 +169,7 @@
             <h1 class="slogan">Cuida tu mente, relaja tu mundo</h1>
             
             <a href="nosotros.html" class="btn-comenzar">Comenzar</a>
+            <a href="https://sites.google.com/cbslp.edu.mx/mono-mente/nosotros" class="btn-secondary" target="_blank" rel="noopener noreferrer">Conócenos</a>
         </section>
     </div>
 
