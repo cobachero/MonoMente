@@ -21,7 +21,6 @@ document.getElementById('wellness-form').addEventListener('submit', function(e) 
             causes: results.causes,
             reactions: results.reactions
         }));
-        alert("¡Gracias por compartir cómo te sientes!");
         window.location.href = 'menu.html';
     }
 });
